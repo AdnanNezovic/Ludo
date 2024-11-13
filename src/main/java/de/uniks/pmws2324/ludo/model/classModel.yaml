@@ -1,0 +1,345 @@
+- c: 	org.fulib.classmodel.ClassModel
+  classes: 	game 	location 	color 	field 	piece 	player 	dice
+  defaultCollectionType: 	c1
+  defaultPropertyStyle: 	Bean
+  defaultRoleType: 	"java.util.ArrayList<%s>"
+  mainJavaDir: 	"src/main/java"
+  packageName: 	de.uniks.pmws2324.ludo.model
+  packageSrcFolder: 	"src/main/java/de/uniks/pmws2324/ludo/model"
+
+- game: 	org.fulib.classmodel.Clazz
+  attributes: 	game_currentPlayer 	game_active 	game_firstRound 	game_firstRoundInt
+  model: 	c
+  modified: 	false
+  name: 	Game
+  propertyStyle: 	Bean
+
+- location: 	org.fulib.classmodel.Clazz
+  attributes: 	location_x 	location_y
+  model: 	c
+  modified: 	false
+  name: 	Location
+  propertyStyle: 	Bean
+  subClasses: 	field 	piece
+
+- color: 	org.fulib.classmodel.Clazz
+  attributes: 	color_name
+  model: 	c
+  modified: 	false
+  name: 	Color
+  propertyStyle: 	Bean
+
+- field: 	org.fulib.classmodel.Clazz
+  attributes: 	field_type 	field_nextField 	field_nextHomeField 	field_color
+  model: 	c
+  modified: 	false
+  name: 	Field
+  propertyStyle: 	Bean
+  roles: 	field_piece 	field_baseFieldsOwner
+  superClass: 	location
+
+- piece: 	org.fulib.classmodel.Clazz
+  attributes: 	piece_color
+  model: 	c
+  modified: 	false
+  name: 	Piece
+  propertyStyle: 	Bean
+  roles: 	piece_pieceField 	piece_pieceOwner
+  superClass: 	location
+
+- player: 	org.fulib.classmodel.Clazz
+  attributes: 	player_name 	player_nextPlayer 	player_color 	player_hasRolled 	player_winner 	player_canMoveAPiece 	player_startField 	player_priority
+  model: 	c
+  modified: 	false
+  name: 	Player
+  propertyStyle: 	Bean
+  roles: 	player_baseFields 	player_dice 	player_pieces
+
+- dice: 	org.fulib.classmodel.Clazz
+  attributes: 	dice_number
+  model: 	c
+  modified: 	false
+  name: 	Dice
+  propertyStyle: 	Bean
+  roles: 	dice_currentPlayer
+
+- c1: 	org.fulib.classmodel.CollectionType
+  implClass: 	class java.util.ArrayList
+  implTemplate: 	"java.util.ArrayList<%s>"
+  itf: 	org.fulib.classmodel.CollectionInterface.List
+  qualifiedImplName: 	java.util.ArrayList
+  simpleImplName: 	ArrayList
+
+- game_currentPlayer: 	org.fulib.classmodel.Attribute
+  clazz: 	game
+  id: 	Game_currentPlayer
+  modified: 	false
+  name: 	currentPlayer
+  propertyStyle: 	Bean
+  type: 	Player
+  typeSignature: 	Player
+
+- game_active: 	org.fulib.classmodel.Attribute
+  clazz: 	game
+  id: 	Game_active
+  modified: 	false
+  name: 	active
+  propertyStyle: 	Bean
+  type: 	boolean
+  typeSignature: 	boolean
+
+- game_firstRound: 	org.fulib.classmodel.Attribute
+  clazz: 	game
+  id: 	Game_firstRound
+  modified: 	false
+  name: 	firstRound
+  propertyStyle: 	Bean
+  type: 	boolean
+  typeSignature: 	boolean
+
+- game_firstRoundInt: 	org.fulib.classmodel.Attribute
+  clazz: 	game
+  id: 	Game_firstRoundInt
+  modified: 	false
+  name: 	firstRoundInt
+  propertyStyle: 	Bean
+  type: 	int
+  typeSignature: 	int
+
+- location_x: 	org.fulib.classmodel.Attribute
+  clazz: 	location
+  id: 	Location_x
+  modified: 	false
+  name: 	x
+  propertyStyle: 	Bean
+  type: 	double
+  typeSignature: 	double
+
+- location_y: 	org.fulib.classmodel.Attribute
+  clazz: 	location
+  id: 	Location_y
+  modified: 	false
+  name: 	y
+  propertyStyle: 	Bean
+  type: 	double
+  typeSignature: 	double
+
+- color_name: 	org.fulib.classmodel.Attribute
+  clazz: 	color
+  id: 	Color_name
+  modified: 	false
+  name: 	name
+  propertyStyle: 	Bean
+  type: 	String
+  typeSignature: 	String
+
+- field_type: 	org.fulib.classmodel.Attribute
+  clazz: 	field
+  id: 	Field_type
+  modified: 	false
+  name: 	type
+  propertyStyle: 	Bean
+  type: 	String
+  typeSignature: 	String
+
+- field_nextField: 	org.fulib.classmodel.Attribute
+  clazz: 	field
+  id: 	Field_nextField
+  modified: 	false
+  name: 	nextField
+  propertyStyle: 	Bean
+  type: 	Field
+  typeSignature: 	Field
+
+- field_nextHomeField: 	org.fulib.classmodel.Attribute
+  clazz: 	field
+  id: 	Field_nextHomeField
+  modified: 	false
+  name: 	nextHomeField
+  propertyStyle: 	Bean
+  type: 	Field
+  typeSignature: 	Field
+
+- field_color: 	org.fulib.classmodel.Attribute
+  clazz: 	field
+  id: 	Field_color
+  modified: 	false
+  name: 	color
+  propertyStyle: 	Bean
+  type: 	Color
+  typeSignature: 	Color
+
+- field_piece: 	org.fulib.classmodel.AssocRole
+  aggregation: 	false
+  cardinality: 	1
+  clazz: 	field
+  id: 	Field_piece
+  modified: 	false
+  name: 	piece
+  other: 	piece_pieceField
+  propertyStyle: 	Bean
+
+- field_baseFieldsOwner: 	org.fulib.classmodel.AssocRole
+  aggregation: 	false
+  cardinality: 	1
+  clazz: 	field
+  id: 	Field_baseFieldsOwner
+  modified: 	false
+  name: 	baseFieldsOwner
+  other: 	player_baseFields
+  propertyStyle: 	Bean
+
+- piece_color: 	org.fulib.classmodel.Attribute
+  clazz: 	piece
+  id: 	Piece_color
+  modified: 	false
+  name: 	color
+  propertyStyle: 	Bean
+  type: 	Color
+  typeSignature: 	Color
+
+- piece_pieceField: 	org.fulib.classmodel.AssocRole
+  aggregation: 	false
+  cardinality: 	1
+  clazz: 	piece
+  id: 	Piece_pieceField
+  modified: 	false
+  name: 	pieceField
+  other: 	field_piece
+  propertyStyle: 	Bean
+
+- piece_pieceOwner: 	org.fulib.classmodel.AssocRole
+  aggregation: 	false
+  cardinality: 	1
+  clazz: 	piece
+  id: 	Piece_pieceOwner
+  modified: 	false
+  name: 	pieceOwner
+  other: 	player_pieces
+  propertyStyle: 	Bean
+
+- player_name: 	org.fulib.classmodel.Attribute
+  clazz: 	player
+  id: 	Player_name
+  modified: 	false
+  name: 	name
+  propertyStyle: 	Bean
+  type: 	String
+  typeSignature: 	String
+
+- player_nextPlayer: 	org.fulib.classmodel.Attribute
+  clazz: 	player
+  id: 	Player_nextPlayer
+  modified: 	false
+  name: 	nextPlayer
+  propertyStyle: 	Bean
+  type: 	Player
+  typeSignature: 	Player
+
+- player_color: 	org.fulib.classmodel.Attribute
+  clazz: 	player
+  id: 	Player_color
+  modified: 	false
+  name: 	color
+  propertyStyle: 	Bean
+  type: 	Color
+  typeSignature: 	Color
+
+- player_hasRolled: 	org.fulib.classmodel.Attribute
+  clazz: 	player
+  id: 	Player_hasRolled
+  modified: 	false
+  name: 	hasRolled
+  propertyStyle: 	Bean
+  type: 	boolean
+  typeSignature: 	boolean
+
+- player_winner: 	org.fulib.classmodel.Attribute
+  clazz: 	player
+  id: 	Player_winner
+  modified: 	false
+  name: 	winner
+  propertyStyle: 	Bean
+  type: 	boolean
+  typeSignature: 	boolean
+
+- player_canMoveAPiece: 	org.fulib.classmodel.Attribute
+  clazz: 	player
+  id: 	Player_canMoveAPiece
+  modified: 	false
+  name: 	canMoveAPiece
+  propertyStyle: 	Bean
+  type: 	boolean
+  typeSignature: 	boolean
+
+- player_startField: 	org.fulib.classmodel.Attribute
+  clazz: 	player
+  id: 	Player_startField
+  modified: 	false
+  name: 	startField
+  propertyStyle: 	Bean
+  type: 	Field
+  typeSignature: 	Field
+
+- player_priority: 	org.fulib.classmodel.Attribute
+  clazz: 	player
+  id: 	Player_priority
+  modified: 	false
+  name: 	priority
+  propertyStyle: 	Bean
+  type: 	int
+  typeSignature: 	int
+
+- player_baseFields: 	org.fulib.classmodel.AssocRole
+  aggregation: 	false
+  cardinality: 	42
+  clazz: 	player
+  collectionType: 	c1
+  id: 	Player_baseFields
+  modified: 	false
+  name: 	baseFields
+  other: 	field_baseFieldsOwner
+  propertyStyle: 	Bean
+  roleType: 	"java.util.ArrayList<%s>"
+
+- player_dice: 	org.fulib.classmodel.AssocRole
+  aggregation: 	false
+  cardinality: 	1
+  clazz: 	player
+  id: 	Player_dice
+  modified: 	false
+  name: 	dice
+  other: 	dice_currentPlayer
+  propertyStyle: 	Bean
+
+- player_pieces: 	org.fulib.classmodel.AssocRole
+  aggregation: 	false
+  cardinality: 	42
+  clazz: 	player
+  collectionType: 	c1
+  id: 	Player_pieces
+  modified: 	false
+  name: 	pieces
+  other: 	piece_pieceOwner
+  propertyStyle: 	Bean
+  roleType: 	"java.util.ArrayList<%s>"
+
+- dice_number: 	org.fulib.classmodel.Attribute
+  clazz: 	dice
+  id: 	Dice_number
+  modified: 	false
+  name: 	number
+  propertyStyle: 	Bean
+  type: 	int
+  typeSignature: 	int
+
+- dice_currentPlayer: 	org.fulib.classmodel.AssocRole
+  aggregation: 	false
+  cardinality: 	1
+  clazz: 	dice
+  id: 	Dice_currentPlayer
+  modified: 	false
+  name: 	currentPlayer
+  other: 	player_dice
+  propertyStyle: 	Bean
+

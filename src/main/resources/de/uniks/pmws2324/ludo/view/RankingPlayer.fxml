@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="92.0" prefWidth="712.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.uniks.pmws2324.ludo.controller.RankingSubController">
+   <children>
+      <VBox fx:id="namePlayerBox" layoutX="104.0">
+         <children>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="72.0" prefWidth="375.0" style="-fx-border-color: Black; -fx-border-radius: 5px;">
+               <children>
+                  <Label fx:id="namePlayerRankLabel" layoutX="8.0" layoutY="3.0" prefHeight="64.0" prefWidth="287.0">
+                     <font>
+                        <Font name="Book Antiqua" size="30.0" />
+                     </font>
+                  </Label>
+                  <VBox fx:id="colorRankingBox" alignment="CENTER" layoutX="303.0" layoutY="6.0" prefHeight="58.0" prefWidth="62.0" style="-fx-border-color: Black; -fx-border-radius: 5px;">
+                     <children>
+                        <Label fx:id="winnerLetterLabel">
+                           <font>
+                              <Font name="Book Antiqua Bold" size="30.0" />
+                           </font>
+                        </Label>
+                     </children></VBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+      <Label fx:id="rankNumberLabel" layoutX="39.0" layoutY="10.0" prefHeight="52.0" prefWidth="56.0">
+         <font>
+            <Font name="Book Antiqua" size="40.0" />
+         </font>
+      </Label>
+      <Label fx:id="numberOfPieces" layoutX="492.0" layoutY="7.0" prefHeight="58.0" prefWidth="210.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+   </children>
+   <padding>
+      <Insets bottom="20.0" />
+   </padding>
+</AnchorPane>

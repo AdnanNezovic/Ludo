@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="66.0" prefWidth="375.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.uniks.pmws2324.ludo.controller.PlayerSubController">
+   <children>
+      <AnchorPane fx:id="namePlayerBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="72.0" prefWidth="375.0" style="-fx-border-color: Black; -fx-border-radius: 5px;">
+         <children>
+            <Label fx:id="playerName" layoutX="8.0" layoutY="3.0" prefHeight="64.0" prefWidth="287.0">
+               <font>
+                  <Font name="Book Antiqua" size="20.0" />
+               </font>
+            </Label>
+            <VBox fx:id="colorPlayerBox" alignment="CENTER" layoutX="303.0" layoutY="6.0" prefHeight="58.0" prefWidth="62.0" style="-fx-border-color: Black; -fx-border-radius: 5px;">
+               <children>
+                  <Label fx:id="lastNumberThrown">
+                     <font>
+                        <Font name="Book Antiqua" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+   <padding>
+      <Insets bottom="10.0" />
+   </padding>
+</VBox>

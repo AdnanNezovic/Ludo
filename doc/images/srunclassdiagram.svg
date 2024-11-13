@@ -1,0 +1,117 @@
+<svg width="444px" height="510px"
+ viewBox="0.00 0.00 443.50 510.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1.0 1.0) rotate(0) translate(4 506)">
+<title>de.uniks.pmws2324.ludo.model</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-506 439.5,-506 439.5,4 -4,4"/>
+<!-- Color -->
+<g id="node1" class="node">
+<title>Color</title>
+<polygon fill="none" stroke="black" points="8.5,-85 8.5,-107 85.5,-107 85.5,-85 8.5,-85"/>
+<text text-anchor="start" x="31.06" y="-91.4" font-family="Times,serif" font-size="14.00">Color</text>
+<polygon fill="none" stroke="black" points="8.5,-63 8.5,-85 85.5,-85 85.5,-63 8.5,-63"/>
+<text text-anchor="start" x="11.5" y="-69.4" font-family="Times,serif" font-size="14.00">name :String</text>
+</g>
+<!-- Dice -->
+<g id="node2" class="node">
+<title>Dice</title>
+<polygon fill="none" stroke="black" points="159.5,-232 159.5,-254 229.5,-254 229.5,-232 159.5,-232"/>
+<text text-anchor="start" x="181.29" y="-238.4" font-family="Times,serif" font-size="14.00">Dice</text>
+<polygon fill="none" stroke="black" points="159.5,-210 159.5,-232 229.5,-232 229.5,-210 159.5,-210"/>
+<text text-anchor="start" x="162.5" y="-216.4" font-family="Times,serif" font-size="14.00">number :int</text>
+</g>
+<!-- Field -->
+<g id="node3" class="node">
+<title>Field</title>
+<polygon fill="none" stroke="black" points="135.5,-370.5 135.5,-392.5 264.5,-392.5 264.5,-370.5 135.5,-370.5"/>
+<text text-anchor="start" x="185.61" y="-376.9" font-family="Times,serif" font-size="14.00">Field</text>
+<polygon fill="none" stroke="black" points="135.5,-297.5 135.5,-370.5 264.5,-370.5 264.5,-297.5 135.5,-297.5"/>
+<text text-anchor="start" x="138.5" y="-354.9" font-family="Times,serif" font-size="14.00">type :String</text>
+<text text-anchor="start" x="138.5" y="-338.1" font-family="Times,serif" font-size="14.00">nextField :Field</text>
+<text text-anchor="start" x="138.5" y="-321.3" font-family="Times,serif" font-size="14.00">nextHomeField :Field</text>
+<text text-anchor="start" x="138.5" y="-304.5" font-family="Times,serif" font-size="14.00">color :Color</text>
+</g>
+<!-- Location -->
+<g id="node5" class="node">
+<title>Location</title>
+<polygon fill="none" stroke="black" points="220.5,-475.5 220.5,-497.5 278.5,-497.5 278.5,-475.5 220.5,-475.5"/>
+<text text-anchor="start" x="224.62" y="-481.9" font-family="Times,serif" font-size="14.00">Location</text>
+<polygon fill="none" stroke="black" points="220.5,-436.5 220.5,-475.5 278.5,-475.5 278.5,-436.5 220.5,-436.5"/>
+<text text-anchor="start" x="223.5" y="-459.9" font-family="Times,serif" font-size="14.00">x :double</text>
+<text text-anchor="start" x="223.5" y="-443.1" font-family="Times,serif" font-size="14.00">y :double</text>
+</g>
+<!-- Field&#45;&gt;Location -->
+<g id="edge5" class="edge">
+<title>Field&#45;&gt;Location</title>
+<path fill="none" stroke="black" d="M220.56,-397.04C224.21,-405.79 227.97,-414.82 231.52,-423.35"/>
+<polygon fill="none" stroke="black" points="228.35,-424.84 235.43,-432.73 234.81,-422.15 228.35,-424.84"/>
+</g>
+<!-- Player -->
+<g id="node7" class="node">
+<title>Player</title>
+<polygon fill="none" stroke="black" points="119.5,-144 119.5,-166 269.5,-166 269.5,-144 119.5,-144"/>
+<text text-anchor="start" x="176.62" y="-150.4" font-family="Times,serif" font-size="14.00">Player</text>
+<polygon fill="none" stroke="black" points="119.5,-4 119.5,-144 269.5,-144 269.5,-4 119.5,-4"/>
+<text text-anchor="start" x="122.5" y="-128.4" font-family="Times,serif" font-size="14.00">name :String</text>
+<text text-anchor="start" x="122.5" y="-111.6" font-family="Times,serif" font-size="14.00">nextPlayer :Player</text>
+<text text-anchor="start" x="122.5" y="-94.8" font-family="Times,serif" font-size="14.00">color :Color</text>
+<text text-anchor="start" x="122.5" y="-78" font-family="Times,serif" font-size="14.00">hasRolled :boolean</text>
+<text text-anchor="start" x="122.5" y="-61.2" font-family="Times,serif" font-size="14.00">winner :boolean</text>
+<text text-anchor="start" x="122.5" y="-44.4" font-family="Times,serif" font-size="14.00">canMoveAPiece :boolean</text>
+<text text-anchor="start" x="122.5" y="-27.6" font-family="Times,serif" font-size="14.00">startField :Field</text>
+<text text-anchor="start" x="122.5" y="-10.8" font-family="Times,serif" font-size="14.00">priority :int</text>
+</g>
+<!-- Field&#45;&gt;Player -->
+<g id="edge1" class="edge">
+<title>Field&#45;&gt;Player</title>
+<path fill="none" stroke="black" d="M159.25,-293.9C152.36,-282.67 146.22,-270.4 142.5,-258 133.94,-229.46 139.01,-198.28 148.72,-170.4"/>
+<text text-anchor="middle" x="100.13" y="-174.6" font-family="Times,serif" font-size="14.00">baseFieldsOwner</text>
+<text text-anchor="middle" x="124.46" y="-281.3" font-family="Times,serif" font-size="14.00">baseFields *</text>
+</g>
+<!-- Game -->
+<g id="node4" class="node">
+<title>Game</title>
+<polygon fill="none" stroke="black" points="303.5,-110 303.5,-132 427.5,-132 427.5,-110 303.5,-110"/>
+<text text-anchor="start" x="348.79" y="-116.4" font-family="Times,serif" font-size="14.00">Game</text>
+<polygon fill="none" stroke="black" points="303.5,-37 303.5,-110 427.5,-110 427.5,-37 303.5,-37"/>
+<text text-anchor="start" x="306.5" y="-94.4" font-family="Times,serif" font-size="14.00">currentPlayer :Player</text>
+<text text-anchor="start" x="306.5" y="-77.6" font-family="Times,serif" font-size="14.00">active :boolean</text>
+<text text-anchor="start" x="306.5" y="-60.8" font-family="Times,serif" font-size="14.00">firstRound :boolean</text>
+<text text-anchor="start" x="306.5" y="-44" font-family="Times,serif" font-size="14.00">firstRoundInt :int</text>
+</g>
+<!-- Piece -->
+<g id="node6" class="node">
+<title>Piece</title>
+<polygon fill="none" stroke="black" points="263.5,-232 263.5,-254 337.5,-254 337.5,-232 263.5,-232"/>
+<text text-anchor="start" x="285.34" y="-238.4" font-family="Times,serif" font-size="14.00">Piece</text>
+<polygon fill="none" stroke="black" points="263.5,-210 263.5,-232 337.5,-232 337.5,-210 263.5,-210"/>
+<text text-anchor="start" x="266.5" y="-216.4" font-family="Times,serif" font-size="14.00">color :Color</text>
+</g>
+<!-- Piece&#45;&gt;Field -->
+<g id="edge3" class="edge">
+<title>Piece&#45;&gt;Field</title>
+<path fill="none" stroke="black" d="M277.83,-258.02C268.3,-268.55 256.83,-281.21 245.65,-293.55"/>
+<text text-anchor="middle" x="216.5" y="-280.95" font-family="Times,serif" font-size="14.00">pieceField</text>
+<text text-anchor="middle" x="263.07" y="-262.22" font-family="Times,serif" font-size="14.00">piece</text>
+</g>
+<!-- Piece&#45;&gt;Location -->
+<g id="edge6" class="edge">
+<title>Piece&#45;&gt;Location</title>
+<path fill="none" stroke="black" d="M300.04,-258.2C298.88,-290.81 294.93,-349.12 281.5,-397 279.02,-405.83 275.56,-414.95 271.81,-423.56"/>
+<polygon fill="none" stroke="black" points="268.62,-422.12 267.67,-432.67 275,-425.02 268.62,-422.12"/>
+</g>
+<!-- Player&#45;&gt;Dice -->
+<g id="edge2" class="edge">
+<title>Player&#45;&gt;Dice</title>
+<path fill="none" stroke="black" d="M194.5,-170.35C194.5,-183.31 194.5,-195.75 194.5,-205.95"/>
+<text text-anchor="middle" x="182.84" y="-193.35" font-family="Times,serif" font-size="14.00">dice</text>
+<text text-anchor="middle" x="232.2" y="-174.55" font-family="Times,serif" font-size="14.00">currentPlayer</text>
+</g>
+<!-- Player&#45;&gt;Piece -->
+<g id="edge4" class="edge">
+<title>Player&#45;&gt;Piece</title>
+<path fill="none" stroke="black" d="M256.16,-170.35C265.63,-183.31 274.73,-195.75 282.19,-205.95"/>
+<text text-anchor="middle" x="259.45" y="-193.35" font-family="Times,serif" font-size="14.00">pieces *</text>
+<text text-anchor="middle" x="289.97" y="-174.55" font-family="Times,serif" font-size="14.00">pieceOwner</text>
+</g>
+</g>
+</svg>

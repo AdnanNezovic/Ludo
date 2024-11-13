@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="469.0" prefWidth="406.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.uniks.pmws2324.ludo.controller.SetupController">
+   <children>
+      <Label alignment="TOP_LEFT" layoutX="90.0" layoutY="29.0" prefHeight="58.0" prefWidth="226.0" text="Game: Ludo" textAlignment="CENTER">
+         <font>
+            <Font name="System Italic" size="40.0" />
+         </font>
+      </Label>
+      <TextField fx:id="redNameTextfield" layoutX="98.0" layoutY="218.0" prefHeight="38.0" prefWidth="210.0" style="-fx-border-color: black; -fx-border-radius: 5px; -fx-background-color: #ff3333;">
+         <font>
+            <Font name="Book Antiqua" size="20.0" />
+         </font>
+      </TextField>
+      <Button fx:id="exitGameButton" layoutX="64.0" layoutY="399.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="106.0" style="-fx-background-color: #cc0000;" text="Exit" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="startGameButton" defaultButton="true" layoutX="234.0" layoutY="399.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="106.0" style="-fx-background-color: #333399;" text="Start" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Button>
+      <TextField fx:id="blueNameTextfield" layoutX="98.0" layoutY="279.0" prefHeight="38.0" prefWidth="210.0" style="-fx-border-color: black; -fx-border-radius: 5px; -fx-background-color: #66ccff;">
+         <font>
+            <Font name="Book Antiqua" size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="greenNameTextfield" layoutX="97.0" layoutY="159.0" prefHeight="38.0" prefWidth="210.0" style="-fx-border-color: black; -fx-border-radius: 5px; -fx-background-color: #33cc33;">
+         <font>
+            <Font name="Book Antiqua" size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="yellowNameTextfield" layoutX="98.0" layoutY="104.0" prefHeight="38.0" prefWidth="210.0" style="-fx-background-color: #ffff00; -fx-border-color: black; -fx-border-radius: 5px;">
+         <font>
+            <Font name="Book Antiqua" size="20.0" />
+         </font>
+      </TextField>
+      <Label layoutX="68.0" layoutY="349.0" prefHeight="27.0" prefWidth="287.0" text="A maximum of 18 characters is allowed">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
